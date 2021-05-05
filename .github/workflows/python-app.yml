@@ -31,9 +31,17 @@ jobs:
         # exit-zero treats all errors as warnings. The GitHub editor is 127 chars wide
         flake8 . --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics
         
-    - uses: snyk/actions/setup@master
-    
-    - name: Snyk test 
-      run: snyk test
+    - name: Run Snyk to check for vulnerabilities
+      uses: snyk/actions/python@master
       env:
         SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
+      with:
+        args: --sarif-file-output=snyk.sarif
+        
+    - name: Upload result to GitHub Code Scanning
+      uses: github/codeql-action/upload-sarif@v1
+      with:
+        sarif_file: snyk.sarif
+      
+      
+      
