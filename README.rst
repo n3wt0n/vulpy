@@ -14,7 +14,6 @@ Secure Development of EducaciónIT (https://www.educacionit.com/curso-de-desarro
 
 But you can use it has you want (MIT License)
 
-
 OWASP Application Security Verification Standard
 ------------------------------------------------
 
@@ -23,8 +22,6 @@ The "GOOD" version (not finished yet) will comply with the OWASP ASVS:
 https://www.owasp.org/index.php/Category:OWASP_Application_Security_Verification_Standard_Project
 
 This will permit learn how to develop python code following the best security practices.
-
-
 
 Installation
 ------------
