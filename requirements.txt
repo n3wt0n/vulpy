@@ -1,5 +1,5 @@
 click
-cryptography==3.0.0
+cryptography==41.0.5
 Flask
 geoip2
 jsonschema
@@ -7,3 +7,4 @@ PyJWT
 pyotp
 qrcode
 requests==2.0.0
+werkzeug>=3.0.1 # not directly required, pinned by Snyk to avoid a vulnerability
